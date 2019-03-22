@@ -76,8 +76,8 @@
 		//控制移动
 		box.onmousemove=function(e){
 		//偏移值-box左偏移值-1/2mask
-		var left=e.clientX-box.offsetLeft-mask.offsetLeft/2;
-		var top=e.clientY-box.offsettop-mask.offsetTop/2;
+		var left=e.clientX-box.offsetLeft-mask.offsetWidth/2;
+		var top=e.clientY-box.offsetTop-mask.offsetHeight/2;
 		if(left<0){
 			left=0;
 		}else if(left>250){
