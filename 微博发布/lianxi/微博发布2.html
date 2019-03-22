@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			label{
+				vertical-align: top;
+			}
+			textarea{
+				width: 200px;
+				height: 30px;
+			}
+			button{
+				vertical-align: top;
+			}
+			div{
+				width: 300PX;
+				height: 300PX;
+				background-color: gray;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementsByTagName("button")[0];
+				var div=document.getElementsByTagName("div")[0];
+				btn.onclick=function(){
+					var val=document.getElementsByTagName("textarea")[0].value;
+//					追加
+					div.innerHTML+="张三"+val+"<br/>";
+//					清空
+					document.getElementsByTagName("textarea")[0].value="";
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<label>张三</label>
+		<textarea></textarea>
+		<button>提交</button>
+		<div></div>
+	</body>
+</html>

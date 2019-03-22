@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.body{
+				width:500px;
+				height: 20px;
+			}
+			label{
+				width: 40px;
+				height: 20px;
+				float: left;
+			}
+			input{
+				width: 200px;
+				height: 20px;
+				float: left;
+			}
+			span{
+				width: 200px;
+				height: 26px;
+				line-height: 26px;
+				text-indent: 30px;
+				background-color: gray;
+				float: left;
+			}
+			span.wrong{
+				background: url(../static/img/wrong.png) no-repeat;
+			}
+			span.right{
+				background: url(../static/img/right.png) no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var inputs=document.getElementsByTagName("input")[0];
+				var spans=document.getElementsByTagName("span")[0];
+				inputs.onblur=function(){
+				var vals=inputs.value;
+				if(vals==""){
+					spans.innerText="不能为空";
+					spans.className="wrong";
+				}else if(vals<0||vals>150){
+					spans.innerText="不在范围内";
+					spans.className="wrong";
+				}else if(isNaN(Number(vals))){
+					spans.innerText="请输入数字";
+					spans.className="wrong";
+				}else{
+					spans.innerText="输入正确";
+					spans.className="right";
+				}
+			}}
+		</script>
+	</head>
+	<body>
+		<label>高数</label>
+		<input type="text"/>
+		<span>请输入数字</span>
+	</body>
+</html>

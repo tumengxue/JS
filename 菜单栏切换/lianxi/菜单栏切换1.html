@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.body{
+				width: 100%;
+				height: 100px;
+				background-color: gold;
+			}
+			#header{
+				width: 1000px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			a{
+				width: 200px;
+				height: 100px;
+				float: left;
+				text-align: center;
+				line-height: 100px;
+				background-color: pink;
+			}
+			a:hover{
+				background-color: red;
+				text-decoration: none;
+			}
+			a.active{
+				background-color: blue;
+			}
+			.body2{
+				height: 200px;
+				width:100% ;
+				background-color: orange;
+			}
+			.item{
+				/*隐藏*/
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var items=document.getElementsByClassName("item");
+				var lis=document.getElementsByTagName("a");
+				    for(var i=0;i<lis.length;i++){
+					(function(i){
+						lis[i].onclick=function(){
+						for(var j=0;j<lis.length;j++){
+							lis[j].className="";//不激活
+							items[j].style.display="none";//不显示
+						}
+						lis[i].className="active";
+						items[i].style.display="block";
+					}
+					})
+					(i)
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="body">
+			<div id="header">
+				<a href="#" class="active">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+			</div>
+		</div>
+		<div class="body2">
+			<div class="item" style="display: block;">111111</div>
+			<div class="item">222222</div>
+			<div class="item">333333</div>
+			<div class="item">444444</div>
+			<div class="item">555555</div>
+			
+		</div>
+	</body>
+</html>

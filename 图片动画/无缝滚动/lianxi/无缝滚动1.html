@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.box{
+				width: 600px;
+				height: 200px;
+				background-color:red;
+				margin: 40px auto;
+				/*overflow: hidden;*/
+				position: relative;
+			}
+			ul{
+				width: 400%;
+				list-style: none;
+				position: absolute;
+				top: 0px;
+				left: 0;
+			}
+			.box ul li{
+				float: left;
+			}
+			 ul li img{
+				width:300px ;
+				height: 200px;
+				float: left;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var ul=document.getElementsByTagName("ul")[0];
+				var div=document.getElementsByTagName("div")[0];
+				var num=0
+				function move(){
+					if(num<-1200){
+						num=0;
+					}else{
+						num--;
+					}
+					div.style.left=num+"px";
+					
+				}
+				var aa=setInterval(move,3);
+				div.onmouseover=function(){
+					clearInterval(aa);
+				}
+				div.onmouseout=function(){
+					aa=setInterval(move,3);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li><img src="../static/img/01.jpg"</li>
+				<li><img src="../static/img/02.jpg"</li>
+				<li><img src="../static/img/03.jpg"</li>
+				<li><img src="../static/img/04.jpg"</li>
+				
+				<li><img src="../static/img/01.jpg"</li>
+				<li><img src="../static/img/02.jpg"</li>
+			</ul>
+		</div>
+	</body>
+</html>

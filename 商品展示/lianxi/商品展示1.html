@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+			.show{
+				width: 420px;
+				height: 360px;
+			}
+			.show_up{
+				width: 420px;
+				height: 360px;
+				background: url(../static/img/01big.jpg) no-repeat;
+			}
+			.show_down{
+				width: 420px;
+			}
+			.show_down img{
+				float: left;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img=document.getElementsByTagName("img");
+				var show_up=document.getElementsByClassName("show_up")[0];
+				img[0].onmouseover=function(){
+					show_up.style.backgroundImage="url(../static/img/01big.jpg)";
+				}
+				img[1].onmouseover=function(){
+					show_up.style.backgroundImage="url(../static/img/02big.jpg)";
+				}
+				img[2].onmouseover=function(){
+					show_up.style.backgroundImage="url(../static/img/03big.jpg)";
+				}
+				img[3].onmouseover=function(){
+					show_up.style.backgroundImage="url(../static/img/04big.jpg)";
+				}
+				img[4].onmouseover=function(){
+					show_up.style.backgroundImage="url(../static/img/05big.jpg)";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="show">
+			<div class="show_up"></div>
+			<div class="show_down">
+				<img src="../static/img/01.jpg"/>
+				<img src="../static/img/02.jpg"/>
+				<img src="../static/img/03.jpg"/>
+				<img src="../static/img/04.jpg"/>
+				<img src="../static/img/05.jpg"/>
+			</div>
+		</div>
+		
+	</body>
+</html>

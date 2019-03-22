@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0px;
+			}
+			.show{
+				width: 380px;
+				height: 430px;
+				margin: 100px auto;
+				border: 1px solid black;
+			}
+			.show_up{
+				width: 380px;
+				height: 360px;
+				background: url(../static/img/01big.jpg) no-repeat;
+			}
+			
+			.show_down{
+				width: 380px;
+				height: 70px;
+			}
+			.show_down img{
+				float: left;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var show_up=document.getElementsByClassName("show_up")[0];
+				var imgs=document.getElementsByTagName("img");
+				imgs[0].onmouseover=function(){
+					show_up.style.backgroundImage="url(../../../js   day7/商品展示/img/01.jpg)";
+				}
+				imgs[1].onmouseover=function(){
+					show_up.style.backgroundImage="url(../../../js   day7/商品展示/img/02.jpg)";
+				}
+				imgs[2].onmouseover=function(){
+					show_up.style.backgroundImage="url(../../../js   day7/商品展示/img/03.jpg)";
+				}
+				imgs[3].onmouseover=function(){
+					show_up.style.backgroundImage="url(../../../js   day7/商品展示/img/04.jpg)";
+				}
+				imgs[4].onmouseover=function(){
+					show_up.style.backgroundImage="url(../../../js   day7/商品展示/img/05.jpg)";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="show">
+			<div class="show_up"></div>
+			<div class="show_down">
+				<img src="../../../js   day7/商品展示/img/01.jpg"/>
+				<img src="../../../js   day7/商品展示/img/02.jpg"/>
+				<img src="../../../js   day7/商品展示/img/03.jpg"/>
+				<img src="../../../js   day7/商品展示/img/04.jpg"/>
+				<img src="../../../js   day7/商品展示/img/05.jpg"/>
+			</div>
+		</div>
+	</body>
+</html>

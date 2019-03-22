@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: url(../static/img/1.jpg) no-repeat;
+			}
+			.box1{
+				width: 1000px;
+				height: 100px;
+				margin: 100px auto;
+			}
+			img{
+				width: 200px;
+				height: 100px;
+				float: left;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var imgs=document.getElementsByTagName("img");
+				imgs[0].onclick=function(){
+					document.body.style.backgroundImage="url(../static/img/1.jpg)";
+				}
+				imgs[1].onclick=function(){
+					document.body.style.backgroundImage="url(../static/img/2.jpg)";
+				}
+				imgs[2].onclick=function(){
+					document.body.style.backgroundImage="url(../static/img/3.jpg)";
+				}
+				imgs[3].onclick=function(){
+					document.body.style.backgroundImage="url(../static/img/4.jpg)";
+				}
+				imgs[4].onclick=function(){
+					document.body.style.backgroundImage="url(../static/img/5.jpg)";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="box1">
+			<img src="../static/img/1.jpg"/>
+			<img src="../static/img/2.jpg"/>
+            <img src="../static/img/3.jpg"/>
+			<img src="../static/img/4.jpg"/>
+			<img src="../static/img/5.jpg"/>
+		</div>
+	</body>
+</html>

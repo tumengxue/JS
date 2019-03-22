@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.header{
+				width: 100%;
+				height: 60px;
+				background-color: pink;
+			}
+			.container{
+				width: 1000px;
+				height: 60px;
+				margin: 0 auto;
+				background-color: yellow;
+			}
+			a{
+				text-decoration: none;
+				width: 200px;
+				height: 60px;
+				line-height:60px;
+				text-align: center;
+				float: left;
+			}
+			a:hover{
+				background-color: blueviolet;
+			}
+			a:active{
+				background-color: black;
+			}
+			.down{
+				width: 100%;
+				height: 150px;
+				background-color: #800080;
+				overflow: auto;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var a=document.getElementsByTagName("a");
+				var items=document.getElementsByClassName("item");
+				
+				for(var i=0;i<a.length;i++){
+					(function(i){
+					a[i].onclick=function(){
+					for(var j=0;j<a.length;j++){
+						a[j].className="";
+						items[j].style.display="none";
+					}
+					a[i].className="active";
+					items[i].style.display="block";
+				}
+			}
+				)(i)
+			}}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<a href="#" class="active">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+			</div>
+		</div>
+		<div class="down">
+			<ul>
+				<li class="item" style="display: block;">111</li>
+				<li class="item">222</li>
+				<li class="item">333</li>
+				<li class="item">444</li>
+				<li class="item">555</li>
+			</ul>
+		</div>
+	</body>
+</html>
